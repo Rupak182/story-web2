@@ -133,10 +133,9 @@ export default function CustomForm2() {
               )}
             />
               
-            <div className='text-center py-5 w-full'>
-            <Button className='w-full font-bold' type="submit">
-        Signup
-    </Button>            </div>
+              <div className='text-center py-5 w-full'>
+        <LoadingButton pending={form.formState.isSubmitting} text="SignUp"/>
+      </div>
           </form>
 
           </Form>

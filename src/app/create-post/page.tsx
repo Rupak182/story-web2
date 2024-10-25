@@ -21,6 +21,7 @@ import { CreatePostSchema } from '@/schema'
 import { Textarea } from '@/components/ui/textarea'
 import { createPost } from '@/actions/postActions'
 import ErrorMessage from '@/components/ErrorMessage'
+import LoadingButton from '@/components/loading-btn'
 
 export default function CreatePost() {
 
@@ -82,9 +83,9 @@ export default function CreatePost() {
                 </FormItem>
               )}
             />
-            <div className='text-center py-5 w-full'>
-            <Button className='w-full font-bold' type="submit">Create</Button>
-            </div>
+      <div className='text-center py-5 w-full'>
+        <LoadingButton pending={form.formState.isSubmitting  } text="Create"/>
+      </div>
           </form>
         </Form>
 
