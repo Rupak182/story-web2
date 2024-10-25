@@ -5,7 +5,7 @@ export default function LoadingButton({pending,text}:{pending:boolean,text:strin
 
   return (
     
-    <Button className='w-full font-bold' type="submit">
+    <Button disabled={pending} className='w-full font-bold' type="submit">
       {text}
     </Button>
 
